@@ -1,0 +1,73 @@
+@font-face {
+    font-family: "Gilroy";
+    src: url("Gilroy-Medium.ttf");
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Gilroy';
+    color: khaki;
+}
+*::selection{
+    color: #444;
+   background: khaki; 
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+a{
+    text-decoration: none;
+}
+
+#main{
+    width: 100%;
+    height: 100vh;
+    background: #444;
+    position: relative;
+}
+nav{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,0);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 100px;
+    background: #0707072f;
+    box-shadow: 0 0 5px #000;
+}
+nav>h2{
+    font-size: 30px;
+}
+
+nav>ul{
+    display: flex;
+    gap: 50px;
+
+}
+nav>ul>li{
+    list-style: none;
+    font-size: 20px;
+    position: relative;
+}
+nav>ul>li::after{
+    content: "";
+    display: block;
+    width: 0;
+    height: 3px;
+    border-radius: 10px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    background: khaki;
+    transition: 0.3s;
+}
+nav>ul>li:hover::after{
+    width: 100%;
+    transition: 0.5s;
+}
+
