@@ -1,73 +1,131 @@
 @font-face {
-    font-family: "Gilroy";
-    src: url("Gilroy-Medium.ttf");
+  font-family: "Gilroy";
+  src: url("media/Fonts/Gilroy-Medium.ttf");
 }
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Gilroy';
-    color: khaki;
+@font-face {
+  font-family: "Edu Australia";
+  src: url("media/Fonts/EduAUVICWANTArrows-VariableFont_wght.ttf");
 }
-*::selection{
-    color: #444;
-   background: khaki; 
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Gilroy";
+  color: khaki;
 }
-html,body{
+*::selection {
+  color: #444;
+  background: khaki;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+a {
+  text-decoration: none;
+}
+
+#main {
+  width: 100%;
+  height: 100vh;
+  background: #444;
+  position: relative;
+}
+nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 100px;
+  background: #0707072f;
+  box-shadow: 0 0 5px #000;
+}
+nav > h2 {
+  font-size: 30px;
+}
+
+nav > ul {
+  display: flex;
+  gap: 50px;
+}
+nav > ul > li {
+  list-style: none;
+  font-size: 20px;
+  position: relative;
+}
+nav > ul > li::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 3px;
+  border-radius: 10px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  background: khaki;
+  transition: 0.3s;
+}
+nav > ul > li:hover::after {
+  width: 100%;
+  transition: 0.5s;
+}
+
+/* Home */
+#home {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(to right bottom, #000000, #151114, #201c22, #292832, #2e3543, #304051, #304c5d, #2f5968, #2f6673, #30737c, #338083, #3b8d88);
+  display: flex;
+  align-items: center;
+}
+#home > .left {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 500px;
+  height: 800px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card>img{
     height: 100%;
-    width: 100%;
-}
-a{
-    text-decoration: none;
+    scale: 1.2;
 }
 
-#main{
-    width: 100%;
-    height: 100vh;
-    background: #444;
-    position: relative;
+#home > .right {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-nav{
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%,0);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 100px;
-    background: #0707072f;
-    box-shadow: 0 0 5px #000;
+#home > .right > .cBox{
+    font-size: 220px;
+    padding: 0;
 }
-nav>h2{
-    font-size: 30px;
+#home > .right > p{
+    font-size: 200px;
+    font-family: "Edu Australia";
+    padding: 0;
+    border-top: 4px dotted khaki;
+    border-bottom: 4px dotted khaki;
+    line-height: 250px;
 }
-
-nav>ul{
-    display: flex;
-    gap: 50px;
-
-}
-nav>ul>li{
-    list-style: none;
-    font-size: 20px;
-    position: relative;
-}
-nav>ul>li::after{
-    content: "";
-    display: block;
-    width: 0;
-    height: 3px;
-    border-radius: 10px;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%);
-    background: khaki;
-    transition: 0.3s;
-}
-nav>ul>li:hover::after{
-    width: 100%;
-    transition: 0.5s;
-}
-
